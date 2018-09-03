@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Environment Monitor</string>
+    <string name="title_activity_signin_screen">SigninScreen</string>
+</resources>

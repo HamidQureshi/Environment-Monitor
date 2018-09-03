@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluegray"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_temp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="Temperature"/>
+
+        <ImageButton
+            android:id="@+id/image_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_temp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/roundcorner_red"
+            android:onClick="startActivityTemperature"
+            />
+
+        <TextView
+            android:id="@+id/temperature_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_temp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/co2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_above="@id/image_co2"
+                android:textColor="@color/black"
+                android:text="CO2"/>
+
+            <ImageButton
+                android:id="@+id/image_co2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_carbon_dioxide"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_teal"
+                android:onClick="startActivityCo2"
+
+                />
+
+            <TextView
+                android:id="@+id/co2_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/image_co2"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_below="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluegray"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_above="@id/image_humidity"
+                android:textColor="@color/black"
+                android:text="Humidity"/>
+
+            <ImageButton
+                android:id="@+id/image_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_humidity"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_blue"
+                android:onClick="startActivityHumidity"
+                />
+
+            <TextView
+                android:id="@+id/humidity_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/image_humidity"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_pressure"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="Pressure"/>
+
+            <ImageButton
+                android:id="@+id/image_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_atmospheric_pressure"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_yellow"
+                android:onClick="startActivityPressure"
+                />
+
+            <TextView
+                android:id="@+id/pressure_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_pressure"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_below="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluegray"
+
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/ambient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_ambient"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="Ambient Light"
+                />
+
+            <ImageButton
+                android:id="@+id/image_ambient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_ambient"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_lime"
+                android:onClick="startActivityAmbientLight"
+                />
+
+            <TextView
+                android:id="@+id/ambient_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_ambient"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/uvindex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_UV"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="UV Index"/>
+
+            <ImageButton
+                android:id="@+id/image_UV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_uv"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_orange"
+                android:onClick="startActivityUVIndex"
+                />
+
+            <TextView
+                android:id="@+id/uvindex_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_UV"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row4"
+        android:layout_below="@+id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluegray"
+
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/voc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_voc"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="VOC"/>
+
+            <ImageButton
+                android:id="@+id/image_voc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_voc"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_green"
+                android:onClick="startActivityVOC"
+                />
+
+            <TextView
+                android:id="@+id/voc_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_voc"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image_sound"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="Sound"/>
+
+            <ImageButton
+                android:id="@+id/image_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_sound_level"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundcorner_purple"
+                android:onClick="startActivitySound"
+                />
+
+            <TextView
+                android:id="@+id/sound_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_sound"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row5"
+        android:layout_below="@+id/row4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluegray"
+        android:layout_centerInParent="true"
+
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/cleardata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/red"
+                android:onClick="deleteData"
+                android:padding="5dp"
+                android:text="Delete firebase data" />
+
+            <Button
+                android:id="@+id/lightbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/cleardata"
+
+                android:background="@color/green"
+                android:onClick="turnlights"
+                android:padding="5dp"
+                android:text="Turn Lights" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

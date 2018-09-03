@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/iot"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_above="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Environment Monitor"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        />
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:indeterminate="true"
+        android:foregroundTint="@color/colorPrimaryDark"
+        android:progress="20"/>
+
+</RelativeLayout>
